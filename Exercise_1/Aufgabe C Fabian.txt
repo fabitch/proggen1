@@ -1,0 +1,30 @@
+1. Der Endwert der Variable i ist 10.
+	1. i wird auf 10 initialisiert
+	2. Da der increment operator nach der Variable ist wird j ebenfalls auf 10 initialisiert und anschliessend wird i auf 11 erhöht
+	3. der decrement operator steht vor der variable. Dadurch wird erst j auf 9 reduziert und dann c = j = 9 gesetzt
+	4. jetzt steht der increment operator wieder vor der Variable. Also c wird auf 10 erhöht und anschliessend i = c = 10
+
+2. Für den Monat ist ein integer der geeignetste Datentyp. Durch eine einfache logische operation wie
+		if month > 12 || month < 1:
+			raise Exception
+Kann überprüft werden ob der Monat im Definitionsbereich liegt. Weiter lässt sich mit einem integer leicht überprpüfen in welchem Jahreszeitenintervall es sich befindet und leicht manipulieren (arithmetische operationen, um z.B. die Jahreszeit des nächsten Monats zu testen). 
+Es ist unabhängig von der Sprache (anders ein String oder char) und es kann zu keinen floating point fehlern kommen wie bei floats oder doubles. Ein boolean ist ebenfalls nicht geeignet um 12 verschiedene Monate abzubilden
+
+3. Da der Operator !x die niedrigste Präzedenz hat werden diese Operationen als erstes durchgeführt.
+	- Aus !w = true, !q = false
+	- Für !(q||w) muss wegen den () zunächst zunächst q||w evaluiert werden. true||false = true => !true = false
+	- Nun wird Exor ausgeführt: !w ^ !q = true
+	- Die nächst niedriegere Präzedenz hat der && operator: !(q||w) && t = false && true = false
+	- Als letztes wird || ausgeführt: wir wissen bereits dass !w ^ !q = true und !(q||w) && t = false => false || true = true
+
+4. 2 entspricht der Binärkombination 010
+	5 entspricht der Binärkombination 101
+	Das Ergebnis ist an jeder Stelle genau dann 1, wenn entweder bei der einen oder bei der anderen eine 1 steht. Somit kommen wir auf die binäre Zahl 111, diese entspricht der dezimalen 7.
+
+5.
+	a) 9.999999999985448
+	b) 9.9921875
+	c) 10.00
+Der unterschied entsteht durch die endliche Anzahl an Nachkommastellen die in einem float oder einem double zur Verfügung steht. Ein float in java bekommt 32 bits speicher und ein double 64 bits speicher zugewiesen. Eine Gleitkommazahl x wird im Computer wie folgt gespeichert:
+	x = (-1)^Vorzeichen * Mantisse * 2 ^ Exponent
+Dabei kommt es zu Rundungsfehlern, da die Zahl in wissenschaftlicher Schreibweise mit einer beschränkten Präzision abgespeichert wird. 
