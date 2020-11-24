@@ -21,6 +21,14 @@ class Division{
 		return a;
 	}
 
+	public static double DivideToNumbers(double numerator, double denumerator){
+		if (denumerator == 0){
+			return Float.NaN;
+		}
+
+		return numerator / denumerator;
+	}
+
 	public static void main(String[] args){
 
 		double a = 6;
@@ -29,11 +37,7 @@ class Division{
 		a = getNumber();
 		b = getNumber();
 
-		// it is enough to change the denumerator to NaN to get a NaN result in a division
-		if (b == 0){
-			b = Float.NaN;
-		}
-
-		System.out.println(a / b);
+		double result = DivideToNumbers(a, b);
+		System.out.println(result);
 	}
 }
