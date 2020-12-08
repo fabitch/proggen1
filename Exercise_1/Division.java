@@ -1,13 +1,13 @@
 class Division{
 
-	public static double getNumber(){
+	public static double getNumber(String inLineText){
 
 		double a;
 
 		// repeating this loop until valid number has been provided
 		do{
 			try{
-				String input = System.console().readLine("Provide a number: ");
+				String input = System.console().readLine(inLineText);
 				a = (double) Float.parseFloat(input);
 					break;
 			}
@@ -34,8 +34,8 @@ class Division{
 		double a = 6;
 		double b = 3;
 
-		a = getNumber();
-		b = getNumber();
+		a = getNumber("Provide a number: ");
+		b = getNumber("Provide another number: ");
 
 		double result = DivideToNumbers(a, b);
 		System.out.println(result);
