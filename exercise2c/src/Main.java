@@ -1,3 +1,8 @@
+/**
+ * Does some magic square computations. This can interpret a limited
+ * amount of commands and doesn'T catch any exceptions
+ * @author fabiandill
+ */
 public class Main {
 
     /**
@@ -29,6 +34,13 @@ public class Main {
         }
         return square;
     }
+
+    /**
+     * main method for the magic square app
+     * @param args command line input. only allows to be showMagicNumbers,
+     *             isMagicSquare? complement as first argument and
+     *             a an array like string for the secong argument
+     */
     public static void main(String[] args){
 
         if (args[0].equals("showMagicNumbers")) {
