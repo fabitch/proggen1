@@ -17,9 +17,14 @@ public class MagicSquare {
         }
         for (int row = 0; row < convertible.length; row++){
             for (int col = 0; col < convertible.length; col++){
-                output.append(convertible[row][col] + " ");
+                output.append(convertible[row][col]);
+                if (col < convertible.length - 1){
+                    output.append(" ");
+                }
             }
-            output.append("\n");
+            if (row < convertible.length - 1) {
+                output.append("\n");
+            }
         }
         return output.toString();
     }
@@ -27,7 +32,7 @@ public class MagicSquare {
     public String isMagicSquare(){
         if (checkIfColsAreMagic() & checkIfRowsAreMagic()){
             if (checkIfLeftDiagonalIsMagic() & checkIfRightDiagonalIsMagic()){
-                return "magical square";
+                return "magic square";
             }
             return "semimagic square";
         }

@@ -41,8 +41,10 @@ public class Main {
             // creating a String to be printed out
             StringBuilder magicNumberString = new StringBuilder();
             for(int index = 0; index < magicNumbers.length; index++){
-                magicNumberString.append(index);
-                magicNumberString.append(", ");
+                magicNumberString.append(magicNumbers[index]);
+                if (index < magicNumbers.length - 1) {
+                    magicNumberString.append(", ");
+                }
             }
             System.out.println(magicNumberString);
         }
