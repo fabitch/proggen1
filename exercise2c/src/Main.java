@@ -1,6 +1,3 @@
-import java.util.Arrays;
-import java.util.BitSet;
-
 public class Main {
 
     /**
@@ -41,7 +38,13 @@ public class Main {
 
             MagicSquare magicSquare = new MagicSquare(square);
             int[] magicNumbers = magicSquare.showMagicNumbers(dimension);
-            System.out.println(Arrays.toString(magicNumbers));
+            // creating a String to be printed out
+            StringBuilder magicNumberString = new StringBuilder();
+            for(int index = 0; index < magicNumbers.length; index++){
+                magicNumberString.append(index);
+                magicNumberString.append(", ");
+            }
+            System.out.println(magicNumberString);
         }
         else {
             if (args[0].equals("isMagicSquare?")) {
