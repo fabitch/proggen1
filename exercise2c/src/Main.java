@@ -8,6 +8,7 @@ public class Main {
      * @param inputString has to be an comma separated String of arrays
      * @return multi dimensional Array
      */
+    // Note: This could be refactored into a class of its own for more readability.
     public static int[][] parseStringToArray(String inputString){
         int [][] square;
         String[] arrayString = inputString.split(";");
