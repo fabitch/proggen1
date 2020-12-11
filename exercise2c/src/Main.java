@@ -2,6 +2,7 @@
  * Does some magic square computations. This can interpret a limited
  * amount of commands and doesn'T catch any exceptions
  * @author fabiandill
+ * @version 1.0
  */
 public class Main {
 
@@ -55,7 +56,7 @@ public class Main {
             for(int index = 0; index < magicNumbers.length; index++){
                 magicNumberString.append(magicNumbers[index]);
                 if (index < magicNumbers.length - 1) {
-                    magicNumberString.append(", ");
+                    magicNumberString.append(",");
                 }
             }
             System.out.println(magicNumberString);

@@ -1,6 +1,7 @@
 /**
  * Does some magic square computations
  * @author fabiandill
+ * @version 1.0
  */
 public class MagicSquare {
     int[][] square;
@@ -67,6 +68,7 @@ public class MagicSquare {
         }
         return sum == magicNumber;
     }
+
     /**
      * Calculates the sum of the diagonal right to left
      * @return sum of the diagonal starting at (0,n)
